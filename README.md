@@ -12,6 +12,7 @@ En sistemas Debian/Ubuntu:
 ```bash
 sudo apt update
 sudo apt install openmpi-bin libopenmpi-dev -y
+```	
 Verifica la instalación:
 
 ```bash
@@ -19,7 +20,7 @@ mpicc --version
 mpirun --version
 ```
 
-2. Elegir un Editor de Código
+### 2. Elegir un Editor de Código
 Puedes usar el editor que prefieras:
 
 - Visual Studio Code (recomendado, con terminal integrada)
@@ -31,7 +32,7 @@ nano problema.c
 ```
 - vim, gedit, etc.
 
-1. Descripción del Código
+### 3. Explicación del Código
 El archivo problema.c contiene un programa que:
 
 - Se crea una matriz 1D de tamaño N x N.
@@ -53,24 +54,23 @@ Matriz original (N = 4):
 
 Parte triangular superior:
 
-|  0 |  1 |  2 |  3 |
-|    |  5 |  6 |  7 |
-|    |    | 10 | 11 |
-|    |    |    | 15 |
-
-4. Compilación
+```bash
+[0, 1, 2, 3, 5, 6, 7, 9, 10, 11]
+```
+### 4. Compilación
 Compila el archivo .c con el compilador MPI:
 
 ```bash
 mpicc problema.c -o problema
 ```
-5. Ejecución
+### 5. Ejecución
 Ejecuta el programa con 2 procesos:
 
 ```bash
 mpiexec -n 2 ./problema
+```
 ```bash
 mpiexec -n {numero de procesos} ./problema
 ```
-Resultado : 
+### 6. Resultado : 
 ![Solución en bash](images/1.png)
