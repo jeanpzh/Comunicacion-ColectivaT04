@@ -33,7 +33,7 @@ nano problema.c
 - vim, gedit, etc.
 
 ### 3. Explicación del Código
-El archivo problema.c contiene un programa que:
+El archivo problema.c contiene un programa en el que:
 
 - Se crea una matriz 1D de tamaño N x N.
 
@@ -64,13 +64,10 @@ Compila el archivo .c con el compilador MPI:
 mpicc problema.c -o problema
 ```
 ### 5. Ejecución
-Ejecuta el programa con 2 procesos:
 
-```bash
-mpiexec -n 2 ./problema
-```
 ```bash
 mpiexec -n {numero de procesos} ./problema
 ```
+
 ### 6. Resultado : 
 ![Solución en bash](images/1.png)
